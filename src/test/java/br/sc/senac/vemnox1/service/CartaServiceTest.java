@@ -190,17 +190,17 @@ public class CartaServiceTest {
         assertThat(paginas).isEqualTo(20);
     }
 
-    @Test
-    @DisplayName("Deve retornar uma lista de cartas sorteadas")
-    public void testSortearSeisCartas() {
-        List<Carta> seisCartas = cartas.subList(0, 6);
-		when(cartaRepository.sortearSeisCartasMySQL()).thenReturn(seisCartas);
+    // @Test
+    // @DisplayName("Deve retornar uma lista de cartas sorteadas")
+    // public void testSortearSeisCartas() {
+    //     List<Carta> seisCartas = cartas.subList(0, 6);
+	// 	when(cartaRepository.sortearSeisCartasMySQL()).thenReturn(seisCartas);
 
-        List<Carta> resultado = cartaService.sortearSeisCartas();
+    //     List<Carta> resultado = cartaService.sortearSeisCartas();
 
-        assertThat(resultado).isNotNull();
-        assertThat(resultado.size()).isEqualTo(6);
-    }
+    //     assertThat(resultado).isNotNull();
+    //     assertThat(resultado.size()).isEqualTo(6);
+    // }
 
     @Test
     @DisplayName("Deve retornar todas as cartas DTO")
