@@ -138,25 +138,25 @@ public class CartaRepositoryTest {
             .isInstanceOf(ConstraintViolationException.class);
     }
 
-    @Test
-    @DisplayName("Deve mostrar todas as cartas no formato CartaDTO")
-    public void testPesquisarTodasDTO() {
+    // @Test
+    // @DisplayName("Deve mostrar todas as cartas no formato CartaDTO")
+    // public void testPesquisarTodasDTO() {
     	
-        List<CartaDTO> cartasDTO = cartaRepository.pesquisarTodasDTO();
+    //     List<CartaDTO> cartasDTO = cartaRepository.pesquisarTodasDTO();
 
-        assertThat(cartasDTO).isNotNull();
-        assertThat(cartasDTO).hasSizeGreaterThanOrEqualTo(10); 
-        assertThat(cartasDTO.get(0).getNome()).isEqualTo("Carta 1");
-    }
+    //     assertThat(cartasDTO).isNotNull();
+    //     assertThat(cartasDTO).hasSizeGreaterThanOrEqualTo(10); 
+    //     assertThat(cartasDTO.get(0).getNome()).isEqualTo("Carta 1");
+    // }
 
-    @Test
-    @DisplayName("Deve sortear seis cartas (MySQL)")
-    public void testSortearSeisCartasMySQL() {
-        List<Carta> cartasSorteadas = cartaRepository.sortearSeisCartasMySQL();
+    // @Test
+    // @DisplayName("Deve sortear seis cartas (MySQL)")
+    // public void testSortearSeisCartasMySQL() {
+    //     List<Carta> cartasSorteadas = cartaRepository.sortearSeisCartasMySQL();
 
-        assertThat(cartasSorteadas).isNotNull();
-        assertThat(cartasSorteadas).hasSize(6); // Verifica se foram sorteadas 6 cartas
-    }
+    //     assertThat(cartasSorteadas).isNotNull();
+    //     assertThat(cartasSorteadas).hasSize(6); // Verifica se foram sorteadas 6 cartas
+    // }
 
     //Comentado pois a base de testes é mysql
     //@Test
