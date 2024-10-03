@@ -87,7 +87,9 @@ public class CartaService {
 
 	public List<Carta> sortearSeisCartas() {
 		List<Carta> cartasSorteadas = null;
-		cartasSorteadas = this.cartaRepository.sortearSeisCartas();
+
+			cartasSorteadas = this.cartaRepository.sortearSeisCartasPostgres();
+		
 		return cartasSorteadas;
 	}
 
